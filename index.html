@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tikal Online Client - A massively multiplayer role playing game</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<meta name="author" content="Gilberto Avalos Osuna"/>
+		<meta name="description" content="A massively multiplayer role playing game using WebSockets (Socket.io) and MelonJS."/>
+		<meta name="keywords" content="tikal online, mmorpg, socket.io, 2d mmorpg, canvas, javascript, jquery, games, game engine, juego online, nodejs, html5, crafty, tiled, melon"/>
+		<meta charset="utf-8"/>
+		<link href='http://fonts.googleapis.com/css?family=Belleza' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
+		<script src="http://tikalonline.no-ip.org:1212/nowjs/now.js"></script>
+		<script type="text/javascript" src="lib/livequery.js"></script>
+		<script type="text/javascript" src="lib/ui.js"></script>
+	</head>
+	<body>
+	
+		<div id="register" style="position:absolute; left:3px; top:3px; text-shadow:1px 1px 1px #000;">
+			<b>Don't have an account?</b><br/>
+			Click <a href='http://tikalonline.com/index.php?newacc=1'>here</a> to register!<br/><br/>
+			<!--span style='color:red; text-shadow:1px 1px 1px #eee;'><b>Server OFFLINE Until Monday!</b></span><br/-->
+			<a href="http://www.clixsense.com/?2197565" target="blank_">
+				<img src="clixsense.png" style="margin:5px;" alt="Get Paid to Click Here"/>
+			</a>
+		</div>
+		
+		<div class="msgBox" id="login">
+			<h1>Tikal Online</h1><br/>
+			<input type="text" id="l_usuario" placeholder="User" value="demo"/><br/>
+			<input type="password" id="l_password" placeholder="Password" value="demo"/><br/>
+			<button id="entrar" class='boton2'>Login</button>
+			<a href='http://tikalonline.com/index.php?newacc=1'/>
+				<button id="newAcc" class='boton2'>New Account</button>
+			</a>
+		</div>
+		
+		<div id="selectPlayers" class="msgBox">
+			<div class='tit_box'>Character Selection</div>
+			<div id="selectPlayers_"></div>
+		</div>
+		
+		<div id="msgBox" class="msgBox"></div>
+		
+		<div id="jsapp" align="center">
+		
+			<div id="chat">
+				<div id="c_msgs"></div>
+				<input type="text" id="chat_input"/> <button id="enviar" class='boton1'>Send</button>
+			</div>
+			
+			<div class="st_contenedor">
+				<div class="st_txt" id="hp_txt">0</div>
+				<div id="hp"></div>
+			</div>
+			
+			<div style="top:18px;" class="st_contenedor">
+				<div class="st_txt" id="mana_txt" style="top:-2px;">0</div>
+				<div id="mana"></div>
+			</div>
+			
+			<div id="u_online" class="msgBox">
+				<div class='tit_box'>Online Players</div>
+			</div>
+			<script type="text/javascript" src="lib/melonJS-0.9.3-min.js"></script>
+      		<script type="text/javascript" src="lib/gameObj.js"></script>
+			<script type="text/javascript" src="lib/main.js"></script>
+		</div>
+		
+		<div id="inventory" class="msgBox">
+			<div class='tit_box'>Inventory</div>
+			<div class='x'>x</div>
+			<div id='slot_1' class='slot'></div>
+			<div id='slot_2' class='slot'></div>
+			<div id='slot_3' class='slot'></div>
+			<div id='slot_4' class='slot'></div>
+			<div id='slot_5' class='slot'></div>
+			<div id='slot_6' class='slot'></div>
+			<div id='slot_7' class='slot'></div>
+			<div id='slot_8' class='slot'></div>
+			<div id='slot_9' class='slot'></div>
+			<div id='slot_10' class='slot'></div>
+			<div id='slot_11' class='slot'></div>
+			<div id='slot_12' class='slot'></div>
+			<div id='slot_13' class='slot'></div>
+			<div id='slot_14' class='slot'></div>
+			<div id='slot_15' class='slot'></div>
+			<div id='slot_16' class='slot'></div>
+			<div style='clear:both;'></div>
+		</div>
+		
+		</div>
+		
+	</body>
+</html>
