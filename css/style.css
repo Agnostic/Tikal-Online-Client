@@ -247,22 +247,6 @@ h1{
 
 /* Standard para mensajes */
 .msgBox{
-	/*
-	color:#848484;
-	position:absolute;
-	width:15%;
-	top:18%;
-	left:50%;
-	margin-left:-8.4%;
-	right:0px;
-	text-align:center;
-	border-radius:5px;
-	box-shadow:2px 2px 5px #000;
-	padding:10px;
-	padding-top:5px;
-	background-color:#E6E6E6;
-	background:url('bg_msgbox.png');
-	*/
 	top:18%;
 	left:50%;
 	margin-left:-8.4%;
@@ -320,6 +304,25 @@ h1{
 #inventory{
 	width:144px;
 	display:none;
+}
+
+#stats{
+	width:150px;
+	display:none;
+}
+
+.stat{
+	text-align:left;
+	font-weight:bold;
+}
+
+#nick_stats{
+	font-weight:bold;
+	text-shadow: 1px 1px 1px #848484;
+}
+
+.stat_val{
+	text-align:right;
 }
 
 .slot{
