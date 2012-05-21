@@ -167,9 +167,6 @@ var TikalClient = me.ScreenObject.extend(
    onResetEvent: function(){
 	   
       me.levelDirector.loadLevel("tikal");
-      /*
-      var quest1 = new quest(593, 353);
-      me.game.add(quest1, 7);  */
       
       // Ordenar elementos
       me.game.sort();
