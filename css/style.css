@@ -34,11 +34,12 @@ img{
 /* Contenedor principal */
 #jsapp{
 	position:relative;
+	/*
 	width:800px;
 	height:600px;
 	margin: 5px auto;
-/*display:none;*/
 	border-radius:5px !important;
+	*/
 }
 
 /* Barras de estado */
@@ -89,7 +90,8 @@ img{
 #chat{
 	position:absolute;
 	bottom:0px; 
-	left:0px; 
+	left:50%;
+	margin-left:-397px; 
 	width:794px;
 	height:90px;
 	border-radius:5px;
@@ -305,6 +307,10 @@ h1{
 	display:none;
 }
 
+#options{
+	display:none;
+}
+
 #inventory{
 	width:144px;
 	display:none;
@@ -313,8 +319,8 @@ h1{
 #panel{
 	position:absolute;
 	display:none;
-	right:0px;
-	top:0px;
+	right:3px;
+	top:3px;
 }
 
 #stats{

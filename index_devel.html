@@ -13,6 +13,7 @@
 		<script src="http://tikalonline.no-ip.org:1212/nowjs/now.js"></script>
 		<script type="text/javascript" src="lib/livequery.js"></script>
 		<script type="text/javascript" src="lib/ui.js"></script>
+		<script type="text/javascript" src="lib/lang.js"></script>
 	</head>
 	<body>
 	
@@ -26,14 +27,14 @@
 			<h1>Tikal Online</h1><br/>
 			<input type="text" id="l_usuario" placeholder="User" value="demo"/><br/>
 			<input type="password" id="l_password" placeholder="Password" value="demo"/><br/>
-			<button id="entrar" class='boton2'>Login</button>
+			<button id="entrar" class='boton2 lang_login'>Login</button>
 			<a href='http://tikalonline.com/index.php?newacc=1'/>
-				<button id="newAcc" class='boton2'>New Account</button>
+				<button id="newAcc" class='boton2 lang_nacc'>New Account</button>
 			</a>
 		</div>
 		
 		<div id="selectPlayers" class="msgBox">
-			<div class='tit_box'>Character Selection</div>
+			<div class='tit_box lang_char_sel'>Character Selection</div>
 			<div id="selectPlayers_"></div>
 		</div>
 		
@@ -42,12 +43,12 @@
 		<div id="jsapp" align="center">
 
 			<div id="panel">
-				<button class='boton1' id='btn_stats'>Stats</button> <button class='boton1' id='btn_inv'>Inventory</button> <button class='boton1' id='btn_online'>Who is Online?</button> <button class='boton1' id='btn_help'>Help</button>
+				<button class='boton1 lang_charinfo' id='btn_stats'>Stats</button> <button class='boton1 lang_inventory' id='btn_inv'>Inventory</button> <button class='boton1 lang_unlineb' id='btn_online'>Who is Online?</button> <button class='boton1 lang_options' id='btn_options'>Options</button> <button class='boton1 lang_help' id='btn_help'>Help</button>
 			</div>
 		
 			<div id="chat">
 				<div id="c_msgs"></div>
-				<input type="text" id="chat_input"/> <button id="enviar" class='boton1'>Send</button>
+				<input type="text" id="chat_input"/> <button id="enviar" class='boton1 lang_send'>Send</button>
 			</div>
 			
 			<div class="st_contenedor">
@@ -70,7 +71,7 @@
 		</div>
 		
 		<div id="inventory" class="msgBox">
-			<div class='tit_box'>Inventory</div>
+			<div class='tit_box lang_inventory'>Inventory</div>
 			<div class='x'>x</div>
 			<div id='slot_1' class='slot'></div>
 			<div id='slot_2' class='slot'></div>
@@ -92,29 +93,29 @@
 		</div>
 
 		<div id="stats" class="msgBox">
-			<div class='tit_box'>Statistics</div>
+			<div class='tit_box lang_charinfo'>Statistics</div>
 			<div class='x'>x</div>
 			<div>
 				<span id='nick_stats'>Agnostic</span>
 				<table style='width:100%; font-size:12px; color:#000;'>
 					<tr>
-						<td class='stat'>Level</td>
+						<td class='stat lang_level'>Level</td>
 						<td class='stat_val'><span id='st_level'>1</span></td>
 					</tr>
 					<tr>
-						<td class='stat'>Experience</td>
+						<td class='stat lang_exp'>Experience</td>
 						<td class='stat_val'><span id='st_exp'>1</span></td>
 					</tr>
 					<tr>
-						<td class='stat'>HP</td>
+						<td class='stat lang_hp'>HP</td>
 						<td class='stat_val'><span id='st_hp'>1/100</span></td>
 					</tr>
 					<tr>
-						<td class='stat'>Mana</td>
+						<td class='stat lang_mana'>Mana</td>
 						<td class='stat_val'><span id='st_mana'>100/100</span></td>
 					</tr>
 					<tr>
-						<td class='stat'>Vocation</td>
+						<td class='stat lang_voc'>Vocation</td>
 						<td class='stat_val'><span id='st_vocation'>None</span></td>
 					</tr>
 				</table>
@@ -122,7 +123,7 @@
 		</div>
 
 		<div id="help" class="msgBox">
-			<div class='tit_box'>Help</div>
+			<div class='tit_box lang_help'>Help</div>
 			<div class='x'>x</div>
 			<div style='width:200px; text-align:left;'>
 				<b>Tikal Online</b> is a free multiplayer role playing game developed by Gilberto Avalos.<br/><br/>
@@ -132,6 +133,19 @@
 				I: Inventory<br/>
 				P: Player Statistics<br/>
 				Enter to Chat<br/>
+			</div>
+		</div>
+
+		<div id="options" class="msgBox">
+			<div class='tit_box lang_options'>Options</div>
+			<div class='x'>x</div>
+			<div style='width:170px'>
+				<span class='lang_lang'>Language</span><br/>
+				<select id='lang' style='width:80%; margin:5px;'>
+					<option value="" selected>English</option>
+					<option value="es">Espa&ntilde;ol</option>
+				</select><br/>
+				<button onclick='logOut()' class='boton2 lang_logout' style='margin-top:3px;'>Logout</button> <button onclick="$('#options').fadeOut('fast')" class='boton2 lang_close' style='margin-top:3px;'>Close</button>
 			</div>
 		</div>
 		
